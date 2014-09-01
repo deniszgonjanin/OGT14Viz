@@ -95,6 +95,11 @@
            .attr("d", path)
            .attr("class", "drive");
 
+        route = svg.append("path")
+             .datum(drive)
+             .attr("d", path)
+             .attr("class", "drive");
+
         var geos = drive.features;
         for (i in geos) {
           routeMap[i] = geos[i].geometry.coordinates[0];
